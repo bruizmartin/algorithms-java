@@ -23,7 +23,7 @@ public class MergeSort implements SortAlgorithm {
 			
 			int i = lb, j = index + 1;
 			
-			while (i < index + 1 && j < ub + 1) {
+			while (i <= index && j <= ub) {
 				if (list[i].compareTo(list[j]) < 0) {
 					mergedList.add(list[i++]);
 				} else {
@@ -31,11 +31,11 @@ public class MergeSort implements SortAlgorithm {
 				}
 			}
 			
-			while (i < index + 1) {
+			while (i <= index) {
 				mergedList.add(list[i++]);
 			}
 			
-			while (j < ub + 1) {
+			while (j <= ub) {
 				mergedList.add(list[j++]);
 			}
 			
